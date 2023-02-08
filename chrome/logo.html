@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+
+            @property --angle {
+            syntax: '<angle>';
+            inherits: false;
+            initial-value: 0deg;
+            }
+
+            .container {
+                width: 260px;
+                height: 260px;
+                border-radius: 25px;
+                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+                animation: rotate 3s infinite linear;
+                position: relative;
+                text-align: center;
+                animation: rotate 3s infinite linear;
+            }
+
+            #logo {
+                width: 50px;
+                height: 50px;
+                border: 25px solid black;
+                border-bottom: 50px solid black;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                opacity: 40%;
+            }
+
+            #original {
+                background: conic-gradient(from var(--angle), hsl(162, 100%, 58%), hsl(270, 73%, 53%), hsl(162, 100%, 58%));
+            }
+
+            @keyframes rotate {
+                to {
+                    --angle: 360deg;
+                }
+            }
+        </style>
+    </head>
+    <body>
+
+        <div id="original" class="container">
+            <div id="logo"></div>    
+        </div>
+    </body>
+</html>

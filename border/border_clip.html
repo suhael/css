@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+
+        .container {
+            width: 200px;
+            height: 200px;
+            border-radius: 25px;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            background: linear-gradient(45deg, gold, deeppink);
+
+            position: relative;
+            text-align: center;
+
+            animation: huerotate 6s infinite linear;
+            filter: hue-rotate(360deg);
+
+        }
+
+        .logo {
+
+            width: 50px;
+            height: 50px;
+            border: 25px solid black;
+            border-bottom: 50px solid black;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            opacity: 80%;
+        }
+
+        @keyframes huerotate {
+            0% {
+                filter: hue-rotate(0deg);
+            }
+            100% {
+                filter: hue-rorate(360deg);
+            }
+        }
+
+        </style>
+    </head>
+    <body>
+
+        <div class="container">
+            <div class="logo"></div>
+        </div>
+
+    </body>
+</html>

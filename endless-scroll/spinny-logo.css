@@ -1,0 +1,38 @@
+@property --spinnyAngle {
+    syntax: '<angle>';
+    inherits: false;
+    initial-value: 0deg;
+    }
+
+    .spinny-effect {
+        width: 200px;
+        height: 200px;
+        border-radius: 25px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        animation: spinnyRotate 3s infinite linear;
+        position: relative;
+        text-align: center;
+        animation: spinnyRotate 3s infinite linear;
+    }
+
+    .spinny-logo {
+        width: 50px;
+        height: 50px;
+        border: 25px solid black;
+        border-bottom: 50px solid black;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        opacity: 40%;
+    }
+
+    .cone-gradient {
+        background: conic-gradient(from var(--spinnyAngle), hsl(162, 100%, 58%), hsl(270, 73%, 53%), hsl(162, 100%, 58%));
+    }
+
+    @keyframes spinnyRotate {
+        to {
+            --spinnyAngle: 360deg;
+        }
+    }

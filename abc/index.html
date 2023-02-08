@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+
+.flex-container {
+  display: flex;
+  background-color: black;
+  justify-content: space-between;
+  font-size: 20px;
+}
+
+.flex-container > div {
+  margin: 10px;
+  padding: 20px;
+  flex: 1;
+  flex-grow: 1;
+  transition: flex-grow 0.5s;
+  color: white;
+}
+
+.grow {
+    color: grey;
+    background-size:cover
+}
+
+.grow:hover {
+    flex-grow: 9;
+}
+
+        </style>
+    </head>
+    <body>
+
+        <div class="flex-container">
+            <div style="flex: 0 0 150px">As simple as abc..</div>
+            <div class="grow" style="background-image: url('https://contact-media.imgix.net/gloss/fashion-model-card.jpg?auto=format&fit=crop&dpr=2&crop=faces&w=300&h=200')">Agencies</div>
+            <div class="grow" style="background-image: url('https://contact-media.imgix.net/gloss/photographer-card.jpg?auto=format&fit=crop&dpr=2&crop=faces&w=300&h=200')">Bookers</div>  
+            <div class="grow" style="background-image: url('https://contact-media.imgix.net/gloss/hmua-card.jpg?auto=format&fit=crop&dpr=2&crop=faces&w=300&h=200')">Creatives</div>  
+          </div>
+
+    </body>
+</html>

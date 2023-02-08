@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+
+/* http://www.brandgradients.com/gold-gradient/ */
+
+/* https://codepen.io/yuhomyan/pen/jOqvjZq */
+
+
+/* background: -webkit-gradient(linear, left top, left bottom, from(#D9A3A9), to(#FFE6E9)); */
+
+
+/* https://blog.logrocket.com/advanced-effects-with-css-background-blend-modes-4b750198522a/ */
+
+/* https://github-com.translate.goog/chokcoco/iCSS/issues/157?_x_tr_sl=auto&_x_tr_tl=en&_x_tr_hl=en-US&_x_tr_pto=wapp */
+
+
+            @property --angle {
+            syntax: '<angle>';
+            inherits: false;
+            initial-value: 0deg;
+            }
+
+            div {
+                width: 260px;
+                height: 260px;
+                animation: rotate 3s infinite linear;
+            }
+
+            #original {
+                background: conic-gradient(from var(--angle), hsl(162, 100%, 58%), hsl(270, 73%, 53%), hsl(162, 100%, 58%));
+            }
+
+            #two {
+                background: conic-gradient(from var(--angle), #FCF6BA, #BF953F, #FBF5B7);
+            }
+            #three {
+                background: conic-gradient(from var(--angle), #F6DFE1, #EFD1D5, #D8A2A9, 
+                #B76E78, #D998A3, #F6DFE1, 
+                #FCF6BA, #BF953F, #FBF5B7);
+            }
+
+            #four {
+                background: conic-gradient(from var(--angle), #D9A3A9,#FFE6E9, #D9A3A9,
+                rgba(0, 0, 0, 0.25), #e6e6e6, rgba(0, 0, 0, 0.25),
+                #D9A3A9,#FFE6E9, #D9A3A9);
+            }
+
+
+            #five {
+                background: conic-gradient(from var(--angle), #FCF6BA, #BF953F, #FBF5B7);
+                animation: suhael 5s infinite, rotate 3s infinite linear;
+            }
+
+            #six {
+                background: #B76E78;
+                animation: fader 5s infinite; 
+            }
+            
+            @keyframes rotate {
+                to {
+                    --angle: 360deg;
+                }
+            }
+
+            @keyframes suhael {
+                0% { background: conic-gradient(from var(--angle), rgba(0, 0, 0, 0.25), #e6e6e6, rgba(0, 0, 0, 0.25)); }
+                33% { background: conic-gradient(from var(--angle), #D9A3A9,#FFE6E9, #D9A3A9); }
+                67% { background: conic-gradient(from var(--angle), #FCF6BA, #BF953F, #FBF5B7); }
+                100% { background: conic-gradient(from var(--angle), #D9A3A9,#FFE6E9, #D9A3A9); }
+            }
+
+            @keyframes fader {
+                0% { background-color: #f99; }
+                33% { background-color: #9f9; }  
+                67% { background-color: #99f; }
+                100% { background-color: #f99; }
+            }
+        </style>
+    </head>
+    <body>
+
+        <div id="original"></div>
+        <div id="two"></div>
+        <div id="three"></div>
+        <div id="four"></div>
+        <div id="five"></div>
+
+
+        <div id="six"></div>
+    </body>
+</html>
